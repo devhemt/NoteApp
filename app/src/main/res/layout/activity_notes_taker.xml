@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".NotesTakerActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_notes"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/time_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:hint="Select time"
+                android:textColorHint="@color/white" />
+
+            <Button
+                android:id="@+id/date_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/time_select"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@color/white"
+                android:hint="Select date"
+                android:textColorHint="@color/white" />
+
+            <ImageView
+                android:id="@+id/imageView_save"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:src="@drawable/ic_save" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <EditText
+        android:id="@+id/editText_title"
+        android:hint="Title: "
+        android:textColorHint="@color/white"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:id="@+id/editText_notes"
+        android:hint="Add Notes: "
+        android:textColorHint="@color/white"
+        android:padding="8dp"
+        android:textStyle="normal"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/image_show"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btn_selImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="image"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
